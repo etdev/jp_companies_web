@@ -17,6 +17,7 @@ gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'jquery-turbolinks'
 gem 'rack-timeout'
+gem 'slim'
 
 group :development, :test do
   gem 'byebug', platform: :mri
