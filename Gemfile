@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
 gem "sprockets", '3.6.3'
 gem 'puma', '~> 3.0'
@@ -18,6 +17,7 @@ gem 'font-awesome-rails'
 gem 'jquery-turbolinks'
 gem 'rack-timeout'
 gem 'slim'
+gem 'mysql2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
