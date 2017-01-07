@@ -22,17 +22,17 @@ gem 'mysql2'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry'
+  gem 'database_rewinder'
+  gem 'capybara-webkit'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
 
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'web-console', '~> 2.0'
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
-  gem 'capybara-webkit'
-  gem 'database_rewinder'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
