@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :en_hyouban_entry do
-    sequence(:en_hyouban_id) { |n| "en_hyouban_id#{n}" }
+    sequence(:en_hyouban_id){ |n| n + 30_000}
     name { Faker::Name.name }
     average_salary { Faker::Number.between(32_000, 88000) }
     location { Faker::Address.city }

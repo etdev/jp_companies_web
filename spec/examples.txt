@@ -1,4 +1,5 @@
-example_id                                               | status | run_time        |
--------------------------------------------------------- | ------ | --------------- |
-./spec/features/user_views_en_hyouban_entry_spec.rb[1:1] | passed | 2.87 seconds    |
-./spec/features/user_views_home_page_spec.rb[1:1]        | passed | 0.02864 seconds |
+example_id                                                      | status | run_time        |
+--------------------------------------------------------------- | ------ | --------------- |
+./spec/features/user_views_en_hyouban_entries_list_spec.rb[1:1] | passed | 0.95312 seconds |
+./spec/features/user_views_en_hyouban_entry_spec.rb[1:1]        | passed | 0.03354 seconds |
+./spec/features/user_views_home_page_spec.rb[1:1]               | passed | 0.01974 seconds |
