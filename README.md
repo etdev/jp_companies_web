@@ -1,24 +1,5 @@
-# README
+# JP Companies Web
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails app to explore software engineering companies in Japan
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![circleci](https://circleci.com/gh/etdev/jp_companies_web.svg?style=shield)
