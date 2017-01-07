@@ -12,3 +12,4 @@ machine:
 database:
   override:
     - cp config/database.yml.example config/database.yml
+    - bundle exec rake db:create db:schema:load
