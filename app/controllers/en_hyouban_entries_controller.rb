@@ -5,5 +5,6 @@ class EnHyoubanEntriesController < ApplicationController
 
   def index
     @entries = EnHyoubanEntry.all
+      .page(params[:page])
   end
 end
