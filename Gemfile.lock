@@ -125,6 +125,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     public_suffix (2.0.4)
     puma (3.6.2)
     rack (2.0.1)
@@ -243,6 +246,7 @@ DEPENDENCIES
   mysql2
   neat
   pry
+  pry-byebug
   puma (~> 3.0)
   rack-timeout
   rails (~> 5.0.0, >= 5.0.0.1)

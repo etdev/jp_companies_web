@@ -1,0 +1,3 @@
+class EnHyoubanEntry < ApplicationRecord
+
+end

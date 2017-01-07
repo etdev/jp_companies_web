@@ -22,6 +22,7 @@ gem 'mysql2'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry'
+  gem 'pry-byebug'
   gem 'database_rewinder'
   gem 'capybara-webkit'
   gem 'rspec-rails'
