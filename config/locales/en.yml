@@ -1,5 +1,17 @@
 en:
   homes:
     show:
-      welcome_message: "Welcome"
+      welcome_message: Welcome
+
+  en_hyouban_entries:
+    en_hyouban_entry:
+      en_hyouban_id: ID
+      name: Name
+      average_salary: Average Salary
+      location: Location
+      url: URL
+      rating: Rating
+      ratings_count: Ratings Count
+      daily_hours_worked: Daily Hours Worked
+      category: Category
 
