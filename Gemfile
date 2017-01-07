@@ -31,7 +31,7 @@ group :development do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
-  #gem 'capybara-webkit'
+  gem 'capybara-webkit'
   gem 'database_rewinder'
 end
 
