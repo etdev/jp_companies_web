@@ -1,7 +1,6 @@
 guard :rspec, cmd: "bundle exec bin/rspec" do
   require "guard/rspec/dsl"
-  require 'pry'
-  require 'pry-byebug'
+
   dsl = Guard::RSpec::Dsl.new(self)
   rspec = dsl.rspec
   watch(rspec.spec_helper) { rspec.spec_dir }
@@ -55,7 +54,6 @@ guard 'livereload' do
     gif: :gif,
     jpg: :jpg,
     jpeg: :jpeg,
-    # less: :less, # uncomment if you want LESS stylesheets done in browser
   }
 
   rails_view_exts = %w(erb haml slim)
