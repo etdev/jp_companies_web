@@ -19,4 +19,14 @@ RSpec.feature "User views Vorkers Entry" do
       href: entry.url
     )
   end
+
+  scenario "sees weighted rating" do
+    entry = create(:vorkers_entry)
+
+    visit vorkers_entry_path(entry)
+
+    within "[data-role=weighted-rating]" do
+      expect(page).to have_content(entry.weighted_rating)
+    end
+  end
 end

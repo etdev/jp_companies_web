@@ -43,7 +43,7 @@ guard :rspec, cmd: "bundle exec bin/rspec" do
   end
 
   watch(model_regex) do |m|
-    File.join(rspec.spec_dir, "features")
+    rspec.spec_dir
   end
 
   watch(controller_regex) do |m|

@@ -25,10 +25,10 @@ en:
       name: Name
       location: Location
       url: URL
-      rating: Rating
+      rating: Vorkers Rating
       ratings_count: Ratings
       monthly_overtime: Monthly Overtime Hours
       percent_vacation_used: Percentage of Vacation Used
       category: Category
       view_original: View Original
-
+      weighted_rating: Overall Rating

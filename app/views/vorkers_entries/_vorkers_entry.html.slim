@@ -1,8 +1,8 @@
 .vorkers-entry data-role="vorkers-entry"
   h3.entry-title = vorkers_entry.name
   ul.attr-list
-    li
-      | #{t(".vorkers_id")}: #{vorkers_entry.vorkers_id}
+    li data-role="weighted-rating"
+      | #{t(".weighted_rating")}: #{vorkers_entry.weighted_rating}
     li
       = link_to t(".view_original"), vorkers_entry.url
     li
@@ -15,3 +15,5 @@
       | #{t(".percent_vacation_used")}: #{vorkers_entry.percent_vacation_used}
     li
       | #{t(".category")}: #{vorkers_entry.category}
+    li
+      | #{t(".vorkers_id")}: #{vorkers_entry.vorkers_id}
