@@ -38,6 +38,8 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem "rack-livereload", group: :development
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
