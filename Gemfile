@@ -35,6 +35,9 @@ end
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'web-console', '~> 2.0'
+  gem 'guard-rspec', require: false
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

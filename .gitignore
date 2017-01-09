@@ -20,6 +20,7 @@
 *.rbc
 capybara-*.html
 .rspec
+/spec/examples.txt
 /log
 /tmp
 /db/*.sqlite3

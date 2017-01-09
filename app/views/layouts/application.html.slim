@@ -9,4 +9,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
+    header
+      nav.main-nav
+        = link_to t("app_name"), root_path, "data-role" => "home_link"
     = yield
