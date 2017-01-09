@@ -5,6 +5,7 @@ class EnHyoubanEntriesController < ApplicationController
 
   def index
     @entries = EnHyoubanEntry.all
+      .by_highest_salary
       .page(params[:page])
   end
 end

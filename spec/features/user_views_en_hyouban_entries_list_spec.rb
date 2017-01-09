@@ -27,6 +27,16 @@ RSpec.feature "User views en_hyouban entries list" do
     expect(page).to have_css(".pagination")
   end
 
+  scenario "shows companies sorted by average salary" do
+    create(:en_hyouban_entry, average_salary: 1)
+    high_paying_entry = create(:en_hyouban_entry, average_salary: 2)
+
+    visit en_hyouban_entries_path
+
+    expect(page.all(en_hyouban_entry_css).first)
+      .to have_content(high_paying_entry.en_hyouban_id)
+  end
+
   private
 
   def en_hyouban_entry_css
