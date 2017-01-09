@@ -37,6 +37,22 @@ RSpec.feature "User views en_hyouban entries list" do
       .to have_content(high_paying_entry.en_hyouban_id)
   end
 
+  scenario "doesn't show if too few ratings" do
+    shown_entry = create(
+      :en_hyouban_entry,
+      ratings_count: min_ratings_count + 1
+    )
+    unshown_entry = create(
+      :en_hyouban_entry,
+      ratings_count: min_ratings_count - 1
+    )
+
+    visit en_hyouban_entries_path
+
+    expect(page).to have_content(shown_entry.en_hyouban_id)
+    expect(page).not_to have_content(unshown_entry.en_hyouban_id)
+  end
+
   private
 
   def en_hyouban_entry_css
@@ -45,5 +61,9 @@ RSpec.feature "User views en_hyouban entries list" do
 
   def per_page
     EnHyoubanEntry.default_per_page
+  end
+
+  def min_ratings_count
+    EnHyoubanEntry::MIN_RATINGS_COUNT
   end
 end

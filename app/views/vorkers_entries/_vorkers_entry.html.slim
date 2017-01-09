@@ -1,0 +1,17 @@
+.vorkers-entry data-role="vorkers-entry"
+  h3.entry-title = vorkers_entry.name
+  ul.attr-list
+    li
+      | #{t(".vorkers_id")}: #{vorkers_entry.vorkers_id}
+    li
+      = link_to t(".view_original"), vorkers_entry.url
+    li
+      | #{t(".rating")}: #{vorkers_entry.rating}
+    li
+      | #{t(".ratings_count")}: #{vorkers_entry.ratings_count}
+    li
+      | #{t(".monthly_overtime")}: #{vorkers_entry.monthly_overtime}
+    li
+      | #{t(".percent_vacation_used")}: #{vorkers_entry.percent_vacation_used}
+    li
+      | #{t(".category")}: #{vorkers_entry.category}

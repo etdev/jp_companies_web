@@ -3,14 +3,19 @@ guard :rspec, cmd: "bundle exec bin/rspec" do
 
   dsl = Guard::RSpec::Dsl.new(self)
   rspec = dsl.rspec
+  model_regex = %r{\Aapp/models/\w+\.rb\z}
+  controller_regex = %r{\Aapp/controllers/\w+_controller\.rb\z}
+
   watch(rspec.spec_helper) { rspec.spec_dir }
   watch(rspec.spec_support) { rspec.spec_dir }
   watch(rspec.spec_files)
+
   ruby = dsl.ruby
   dsl.watch_spec_files_for(ruby.lib_files)
   rails = dsl.rails(view_extensions: %w(erb haml slim))
   dsl.watch_spec_files_for(rails.app_files)
   dsl.watch_spec_files_for(rails.views)
+
   watch(rails.controllers) do |m|
     [
       rspec.spec.call("routing/#{m[1]}_routing"),
@@ -34,6 +39,14 @@ guard :rspec, cmd: "bundle exec bin/rspec" do
   end
 
   watch(rails.routes) do |m|
+    File.join(rspec.spec_dir, "features")
+  end
+
+  watch(model_regex) do |m|
+    File.join(rspec.spec_dir, "features")
+  end
+
+  watch(controller_regex) do |m|
     File.join(rspec.spec_dir, "features")
   end
 
