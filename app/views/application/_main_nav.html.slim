@@ -1,0 +1,8 @@
+header.container
+  nav.main-nav
+    .home-link
+      = link_to t("app_name"), root_path, "data-role" => "home_link"
+    .page-links
+      ul
+        li
+          = link_to t("en_hyouban_entries.display_text"), en_hyouban_entries_path

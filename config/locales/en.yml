@@ -5,6 +5,7 @@ en:
       welcome_message: Welcome
 
   en_hyouban_entries:
+    display_text: EN-Hyouban entries
     en_hyouban_entry:
       en_hyouban_id: ID
       name: Name

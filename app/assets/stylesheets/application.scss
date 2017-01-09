@@ -1,13 +1,15 @@
 // vendor
-@import "vendor/normalize";
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
 
 // base
+@import "base/normalize";
+@import "base/variables";
 @import "base/defaults";
 // components
 // layout
 @import "layout/containers";
+@import "layout/nav";
 // pages
 // themes
 // abstracts

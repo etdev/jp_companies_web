@@ -24,6 +24,7 @@ guard :rspec, cmd: "bundle exec bin/rspec" do
 
   # run all feature specs on view, controller, route change
   watch(rails.view_dirs) do |m|
+    binding.pry
     File.join(rspec.spec_dir, "features")
   end
 
