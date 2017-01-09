@@ -1,20 +1,20 @@
 .en-hyouban-entry data-role="en-hyouban-entry"
-  ul
+  h3.entry-title = en_hyouban_entry.name
+
+  ul.attr-list
+    li
+      | #{t(".average_salary")}: #{en_hyouban_entry.average_salary}万円
+    li
+      | #{t(".location")}: #{en_hyouban_entry.location}
+    li
+      = link_to t(".view_original"), en_hyouban_entry.url
+    li
+      | #{t(".rating")}: #{en_hyouban_entry.rating}
+    li
+      | #{t(".ratings_count")}: #{en_hyouban_entry.ratings_count}
+    li
+      | #{t(".daily_hours_worked")}: #{en_hyouban_entry.daily_hours_worked}
+    li
+      | #{t(".category")}: #{en_hyouban_entry.category}
     li data-role = "en_hyouban_id"
-      = "#{t(".en_hyouban_id")}: #{en_hyouban_entry.en_hyouban_id}"
-    li
-      = "#{t(".name")}: #{en_hyouban_entry.name}"
-    li
-      = "#{t(".average_salary")}: #{en_hyouban_entry.average_salary}万円"
-    li
-      = "#{t(".location")}: #{en_hyouban_entry.location}"
-    li
-      = "#{t(".url")}: #{en_hyouban_entry.url}"
-    li
-      = "#{t(".rating")}: #{en_hyouban_entry.rating}"
-    li
-      = "#{t(".ratings_count")}: #{en_hyouban_entry.ratings_count}"
-    li
-      = "#{t(".daily_hours_worked")}: #{en_hyouban_entry.daily_hours_worked}"
-    li
-      = "#{t(".category")}: #{en_hyouban_entry.category}"
+      | #{t(".en_hyouban_id")}: #{en_hyouban_entry.en_hyouban_id}

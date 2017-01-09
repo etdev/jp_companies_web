@@ -27,6 +27,8 @@ guard :rspec, cmd: "bundle exec bin/rspec" do
     File.join(rspec.spec_dir, "features")
   end
 
+  watch("config/locales/en.yml") { rspec.spec_dir }
+
   watch(rails.app_controller) do |m|
     File.join(rspec.spec_dir, "features")
   end

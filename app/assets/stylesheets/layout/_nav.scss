@@ -1,6 +1,15 @@
 .main-nav {
-  .home-link,
+  @include clearfix;
+  @include outer-container;
+
+  padding: 1em 0;
+
   .page-links {
+    float: right;
+  }
+
+  .home-link {
     float: left;
+    font-size: 2em;
   }
 }

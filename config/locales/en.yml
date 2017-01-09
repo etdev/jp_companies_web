@@ -5,7 +5,7 @@ en:
       welcome_message: Welcome
 
   en_hyouban_entries:
-    display_text: EN-Hyouban entries
+    display_text: EN-Hyouban
     en_hyouban_entry:
       en_hyouban_id: ID
       name: Name
@@ -13,7 +13,8 @@ en:
       location: Location
       url: URL
       rating: Rating
-      ratings_count: Ratings Count
+      ratings_count: Ratings
       daily_hours_worked: Daily Hours Worked
       category: Category
+      view_original: View Original
 

@@ -1,4 +1,18 @@
 /* Web fonts */
-//@import
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
 
+// links
+a {
+  color: $action-color;
+  @include darken-on-hover($action-color, 10%);
+}
+
+// headers
+h2,
+h3 {
+  margin-top: 1em;
+}

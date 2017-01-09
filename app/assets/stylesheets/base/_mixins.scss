@@ -1,0 +1,7 @@
+@mixin darken-on-hover($color, $percent) {
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($color, $percent);
+  }
+}
