@@ -1,0 +1,3 @@
+[submodule "app/assets/stylesheets/normalize"]
+	path = app/assets/stylesheets/normalize
+	url = git://github.com/etdev/normalize.scss.git
