@@ -4,6 +4,6 @@ class VorkersEntry < ApplicationRecord
   validates :vorkers_id, presence: true, uniqueness: true
 
   def weighted_rating
-    VorkersWeightedRating.new(self).rating
+    WeightedRating::Vorkers.new(self).rating
   end
 end

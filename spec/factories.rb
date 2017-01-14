@@ -12,7 +12,7 @@ FactoryGirl.define do
         EnHyoubanEntry::MIN_RATINGS_COUNT + 100,
       )
     end
-    daily_hours_worked { %w(7-8 8-9 9-10).sample }
+    daily_hours_worked { %w(8-9 9-10 10-11).sample }
     category { Faker::GameOfThrones.house }
   end
 
