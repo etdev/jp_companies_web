@@ -6,7 +6,7 @@ module WeightedRating
 
     def rating
       ATTR_TRANSFORMERS.reduce(0) do |weighted_rating, (attr, transform)|
-        weighted_rating += transform.call(entry[attr]) * ATTR_WEIGHTS[attr]
+        weighted_rating + transform.call(entry[attr]) * ATTR_WEIGHTS[attr]
       end.to_i
     end
 
@@ -18,8 +18,8 @@ module WeightedRating
       rating: 0.5,
       average_salary: 0.2,
       ratings_count: 0.15,
-      daily_hours_worked: 0.15,
-    }
+      daily_hours_worked: 0.15
+    }.freeze
 
     ATTR_TRANSFORMERS = {
       rating: ->(rating) { rating },
@@ -37,7 +37,7 @@ module WeightedRating
         when "9-10" then 60
         when "10-11" then 40
         end
-      },
-    }
+      }
+    }.freeze
   end
 end

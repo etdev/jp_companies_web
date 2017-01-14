@@ -6,7 +6,7 @@ module WeightedRating
 
     def rating
       ATTR_TRANSFORMERS.reduce(0) do |weighted_rating, (attr, transform)|
-        weighted_rating += transform.call(entry[attr]) * ATTR_WEIGHTS[attr]
+        weighted_rating + transform.call(entry[attr]) * ATTR_WEIGHTS[attr]
       end.to_i
     end
 
@@ -19,7 +19,7 @@ module WeightedRating
       ratings_count: 0.2,
       monthly_overtime: 0.15,
       percent_vacation_used: 0.15
-    }
+    }.freeze
 
     ATTR_TRANSFORMERS = {
       rating: ->(rating) { rating * 20 },
@@ -36,6 +36,6 @@ module WeightedRating
       percent_vacation_used: ->(percent_vacation_used) {
         [percent_vacation_used, 100].max
       }
-    }
+    }.freeze
   end
 end

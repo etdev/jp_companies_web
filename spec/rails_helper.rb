@@ -4,9 +4,13 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 
 ActiveRecord::Migration.maintain_test_schema!
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+if Rails.env.production?
+  abort("The Rails environment is running in production mode!")
+end
 
-Dir[File.expand_path(File.join(File.dirname(__FILE__),"support","**","*.rb"))].each {|f| require f}
+Dir[File.expand_path(
+  File.join(File.dirname(__FILE__), "support", "**", "*.rb")
+)].each { |f| require f }
 
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

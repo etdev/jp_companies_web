@@ -40,6 +40,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'guard-livereload', '~> 2.5', require: false
   gem "rack-livereload", group: :development
+  gem 'rubocop', require: false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

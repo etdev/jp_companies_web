@@ -1,5 +1,4 @@
 class EnHyoubanEntry < ApplicationRecord
-
   MIN_RATINGS_COUNT = 10
 
   validates :en_hyouban_id, presence: true, uniqueness: true
