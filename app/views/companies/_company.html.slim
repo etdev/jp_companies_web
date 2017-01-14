@@ -1,0 +1,12 @@
+.company
+  h3.company-name = company.name
+
+  ul.attr-list
+  li
+    | #{t(".name_jp")}: #{company.name_jp}
+  li
+    | #{t(".name_kana")}: #{company.name_kana}
+  li
+    | #{t(".employees_count")}: #{company.employees_count}
+  li data-role='company_id'
+    | #{t(".id")}: #{company.id}

@@ -1,5 +1,11 @@
 en:
   app_name: JP Companies
+  companies:
+    name_jp: Name (JP)
+    name_kana: Name (kana)
+    employees_count: Employee Count
+    id: ID
+
   homes:
     show:
       welcome_message: Welcome
@@ -17,6 +23,7 @@ en:
       daily_hours_worked: Daily Hours Worked
       category: Category
       view_original: View Original
+      weighted_rating: Overall Rating
 
   vorkers_entries:
     display_text: Vorkers

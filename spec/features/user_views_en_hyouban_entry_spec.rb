@@ -11,4 +11,15 @@ RSpec.feature "User views en_hyouban entry" do
       text: entry.en_hyouban_id
     )
   end
+
+  scenario "sees overall rating" do
+    entry = create(:en_hyouban_entry)
+
+    visit en_hyouban_entry_path(entry)
+
+    expect(page).to have_css(
+      "[data-role=weighted_rating]",
+      text: entry.weighted_rating
+    )
+  end
 end
