@@ -1,6 +1,7 @@
 en:
   app_name: JP Companies
   companies:
+    display_text: Companies
     name_jp: Name (JP)
     name_kana: Name (kana)
     employees_count: Employee Count

@@ -2,11 +2,16 @@
   h3.company-name = company.name
 
   ul.attr-list
-  li
-    | #{t(".name_jp")}: #{company.name_jp}
-  li
-    | #{t(".name_kana")}: #{company.name_kana}
-  li
-    | #{t(".employees_count")}: #{company.employees_count}
-  li data-role='company_id'
-    | #{t(".id")}: #{company.id}
+    li
+      | #{t(".name_jp")}: #{company.name_jp}
+    li
+      | #{t(".name_kana")}: #{company.name_kana}
+    li
+      | #{t(".employees_count")}: #{company.employees_count}
+    li data-role='company_id'
+      | #{t(".id")}: #{company.id}
+
+    - if company.vorkers_entry.present?
+      = render company.vorkers_entry
+    - if company.en_hyouban_entry.present?
+      = render company.en_hyouban_entry

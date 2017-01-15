@@ -2,6 +2,8 @@ class EnHyoubanEntry < ApplicationRecord
   MIN_RATINGS_COUNT = 10
   WEIGHT = 1
 
+  belongs_to :company
+
   validates :en_hyouban_id, presence: true, uniqueness: true
   validates :name, presence: true
   validates :average_salary, presence: true
