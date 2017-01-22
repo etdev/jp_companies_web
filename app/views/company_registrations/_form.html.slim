@@ -1,31 +1,29 @@
-section.area
+section
   .form
     h3.form__heading New company
-    = form_for :company_registration do |form|
+    = form_for :company_registration, url: company_registrations_path do |form|
       .form__row
-        = form.label :name
+        = form.label Company.human_attribute_name(:name)
         = form.text_field :name
 
       .form__row
-        = form.label :name_jp
+        = form.label Company.human_attribute_name(:name_jp)
         = form.text_field :name_jp
 
       .form__row
-        = form.label :name_kana
+        = form.label Company.human_attribute_name(:name_kana)
         = form.text_field :name_kana
 
-      section.area.area--nested
-        .form.form--nested
-          h3.form__heading EnHyouban Entry
-          .form__row
-            = form.label :en_hyouban_id
-            = form.text_field :en_hyouban_id
+      .form.form--nested
+        h3.form__heading EnHyouban Entry
+        .form__row
+          = form.label EnHyoubanEntry.human_attribute_name(:en_hyouban_id)
+          = form.text_field :en_hyouban_id
 
-      section.area.area--nested
-        .form.form--nested
-          h3.form__heading Vorkers Entry
-          .form__row
-            = form.label :vorkers_id
-            = form.text_field :vorkers_id
+      .form.form--nested
+        h3.form__heading Vorkers Entry
+        .form__row
+          = form.label VorkersEntry.human_attribute_name(:vorkers_id)
+          = form.text_field :vorkers_id
 
       = form.submit t(".submit"), class: "btn btn--primary"

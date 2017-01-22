@@ -2,6 +2,10 @@
   margin: 0 auto;
 
   &--nested {
+    border-left: 3px solid #EAEEFB;
+    padding-left: 1.5em;
+    margin: 1.5em auto;
+
     .form__heading {
       font-size: 1em;
     }

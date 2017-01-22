@@ -1,34 +1,35 @@
 en:
   app_name: JP Companies
   activerecord:
-    companies:
-      id: ID
-      name: Name
-      name_jp: Name (JP)
-      name_kana: Name (kana)
-      employees_count: Employee Count
+    attributes:
+      company:
+        id: ID
+        name: Name
+        name_jp: Name (JP)
+        name_kana: Name (kana)
+        employees_count: Employee Count
 
-    en_hyouban_entries:
-      en_hyouban_id: ID
-      name: Name
-      average_salary: Average Salary
-      location: Location
-      url: URL
-      rating: Rating
-      ratings_count: Ratings
-      daily_hours_worked: Daily Hours Worked
-      category: Category
+      en_hyouban_entry:
+        en_hyouban_id: En Hyouban ID
+        name: Name
+        average_salary: Average Salary
+        location: Location
+        url: URL
+        rating: Rating
+        ratings_count: Ratings
+        daily_hours_worked: Daily Hours Worked
+        category: Category
 
-    vorkers_entries:
-      vorkers_id: Vorkers ID
-      name: Name
-      location: Location
-      url: URL
-      rating: Vorkers Rating
-      ratings_count: Ratings
-      monthly_overtime: Monthly Overtime Hours
-      percent_vacation_used: Percentage of Vacation Used
-      category: Category
+      vorkers_entry:
+        vorkers_id: Vorkers ID
+        name: Name
+        location: Location
+        url: URL
+        rating: Vorkers Rating
+        ratings_count: Ratings
+        monthly_overtime: Monthly Overtime Hours
+        percent_vacation_used: Percentage of Vacation Used
+        category: Category
 
   companies:
     display_text: Companies
@@ -36,6 +37,7 @@ en:
   company_registrations:
     messages:
       create_success: Your new company was succesfully created
+      create_failure: Unable to create your company
     form:
       submit: Submit
 
