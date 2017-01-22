@@ -1,0 +1,32 @@
+.btn {
+  border-radius: 3px;
+  cursor: pointer;
+  height: 36px;
+  width: 122.25px;
+  white-space: nowrap;
+
+  &--default {
+    background: #fff;
+    border: 1px solid #bfcbd9;
+    color: #1f2d3d;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $action-color;
+      border-color: $action-color;
+    }
+  }
+
+  &--primary {
+    background: $action-color-light;
+    border: 1px solid $action-color-light;
+    color: #fff;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: $action-color;
+    }
+  }
+}

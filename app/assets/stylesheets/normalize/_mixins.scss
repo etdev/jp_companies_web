@@ -1,3 +1,11 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin media($point) {
   @if ($point == xs) {
     @media (max-width: 767px) { @content }

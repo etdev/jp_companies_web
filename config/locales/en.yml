@@ -1,19 +1,14 @@
 en:
   app_name: JP Companies
-  companies:
-    display_text: Companies
-    name_jp: Name (JP)
-    name_kana: Name (kana)
-    employees_count: Employee Count
-    id: ID
+  activerecord:
+    companies:
+      id: ID
+      name: Name
+      name_jp: Name (JP)
+      name_kana: Name (kana)
+      employees_count: Employee Count
 
-  homes:
-    show:
-      welcome_message: Welcome
-
-  en_hyouban_entries:
-    display_text: EN-Hyouban
-    en_hyouban_entry:
+    en_hyouban_entries:
       en_hyouban_id: ID
       name: Name
       average_salary: Average Salary
@@ -23,12 +18,8 @@ en:
       ratings_count: Ratings
       daily_hours_worked: Daily Hours Worked
       category: Category
-      view_original: View Original
-      weighted_rating: Overall Rating
 
-  vorkers_entries:
-    display_text: Vorkers
-    vorkers_entry:
+    vorkers_entries:
       vorkers_id: Vorkers ID
       name: Name
       location: Location
@@ -38,5 +29,28 @@ en:
       monthly_overtime: Monthly Overtime Hours
       percent_vacation_used: Percentage of Vacation Used
       category: Category
+
+  companies:
+    display_text: Companies
+
+  company_registrations:
+    messages:
+      create_success: Your new company was succesfully created
+    form:
+      submit: Submit
+
+  homes:
+    show:
+      welcome_message: Welcome
+
+  en_hyouban_entries:
+    display_text: EN-Hyouban
+    en_hyouban_entry:
+      view_original: View Original
+      weighted_rating: Overall Rating
+
+  vorkers_entries:
+    display_text: Vorkers
+    vorkers_entry:
       view_original: View Original
       weighted_rating: Overall Rating

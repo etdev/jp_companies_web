@@ -1,0 +1,12 @@
+// physical divided area
+.area {
+  padding: 1.5em;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  transition: .2s;
+
+  &--nested {
+    margin: 1em 0;
+    padding: 1em;
+  }
+}

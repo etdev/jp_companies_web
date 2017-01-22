@@ -1,0 +1,32 @@
+.form {
+  margin: 0 auto;
+
+  &--nested {
+    .form__heading {
+      font-size: 1em;
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    padding: 0.5em 0;
+  }
+
+  &__row {
+    display: block;
+    padding: 0.5em 0;
+
+    label,
+    input {
+      display: inline-block;
+      width: 50%;
+    }
+
+    input[type=text] {
+      border-radius: 3px;
+      box-shadow: none;
+      border: 1px solid #bbb;
+      height: 2em;
+    }
+  }
+}

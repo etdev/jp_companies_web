@@ -1,15 +1,17 @@
-.main-nav {
-  @include clearfix;
-  @include outer-container;
+.nav {
+  &--main {
+    @include clearfix;
+    @include outer-container;
 
-  padding: 1em 0;
+    padding: 1em 0;
 
-  .page-links {
-    float: right;
-  }
+    .nav__page-links {
+      float: right;
+    }
 
-  .home-link {
-    float: left;
-    font-size: 2em;
+    .nav__home-link {
+      float: left;
+      font-size: 2em;
+    }
   }
 }
