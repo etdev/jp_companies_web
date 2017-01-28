@@ -1,16 +1,43 @@
 .nav {
+  @include clearfix;
+  display: flex;
+
   &--main {
-    @include clearfix;
-    padding: 1em;
+    @include single-line-height($main-nav-height);
+    box-shadow: 0 2px 3px hsla(0,0%,7%,.1);
 
     .nav__page-links {
-      float: right;
-      cursor: pointer;
+      @include single-line-height($main-nav-height);
+      align-self: center;
+      flex-grow: 0;
+      display: flex;
+    }
+
+    .nav__page-link {
+      @include single-line-height($main-nav-height);
+      align-content: flex-end;
+      padding: 0 0.5em;
+
+      @include activated {
+        border-bottom: 3px solid $action-color;
+      }
+
+      &:not(:first-of-type) {
+        margin-left: 1em;
+      }
     }
 
     .nav__home-link {
-      float: left;
-      font-size: 2em;
+      @include single-line-height($main-nav-height);
+      padding-left: 0.5em;
+      flex-grow: 1;
+      align-self: center;
+      font-size: 1.5em;
+      font-weight: bold;
+
+      a {
+        display: inline;
+      }
     }
   }
 }

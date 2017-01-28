@@ -1,8 +1,7 @@
-header
-  nav.nav--main
+nav.nav.nav--main
+  .container.container--flex
     .nav__home-link
       = link_to t("app_name"), root_path, "data-role" => "home_link"
-    .nav__page-links
-      ul
-        li
-          = link_to t("companies.display_text"), companies_path
+    ul.nav__page-links
+      li.nav__page-link
+        = link_to t("companies.display_text"), companies_path

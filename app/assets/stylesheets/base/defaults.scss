@@ -8,7 +8,10 @@ body {
 // links
 a {
   color: $action-color;
-  @include darken-on-hover($action-color, 10%);
+
+  @include activated {
+    color: darken($action-color, 10%);
+  }
 }
 
 // headers

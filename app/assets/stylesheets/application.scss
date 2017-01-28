@@ -1,5 +1,4 @@
 // vendor
-// @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
 @import "normalize/normalize";
 
@@ -9,17 +8,18 @@
 @import "base/defaults";
 
 // components
-@import "components/attr_list";
 @import "components/entry";
 @import "components/pagination";
 @import "components/form";
 @import "components/button";
+@import "components/company_list";
 
 // layout
 @import "layout/aside";
 @import "layout/container";
 @import "layout/nav";
 @import "layout/main";
+@import "layout/body";
 
 // pages
 // themes

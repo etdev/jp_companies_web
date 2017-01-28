@@ -1,7 +1,11 @@
 .aside {
-  @include span-columns(2);
-  display: block;
-  margin-right: auto;
+  float: left;
   background: #ccc;
-  min-height: 100vh;
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
+  width: $aside-width;
+
+  @include media(xs) {
+    display: none;
+  }
 }

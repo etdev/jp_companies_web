@@ -6,7 +6,7 @@ RSpec.feature "User views companies list" do
 
     visit companies_path
 
-    within ".companies" do
+    within ".company-list" do
       expect(page).to have_css(company_css, count: 2)
     end
   end

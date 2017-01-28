@@ -1,7 +1,13 @@
 .container {
   @include outer-container;
 
-  &--full {
+  &--main {
     @include outer-container(100%);
+    overflow: auto;
+  }
+
+  &--flex {
+    width: $max-width;
+    display: flex;
   }
 }
