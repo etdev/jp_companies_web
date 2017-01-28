@@ -1,13 +1,25 @@
 require "rails_helper"
 
 RSpec.feature "User views companies list" do
-  scenario "and sees company data" do
+  scenario "sees company data" do
     create_list(:company, 2)
 
     visit companies_path
 
     within ".company-list" do
       expect(page).to have_css(company_css, count: 2)
+    end
+  end
+
+  scenario "sees data sorted by rating" do
+    create(:company, rating: 1)
+    highly_rated_company = create(:company, rating: 2)
+
+    visit companies_path
+
+    within ".company-list" do
+      expect(page.all(company_css).first)
+        .to have_content(highly_rated_company.name)
     end
   end
 

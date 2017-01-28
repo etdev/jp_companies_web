@@ -6,6 +6,10 @@
     overflow: auto;
   }
 
+  &--set-width {
+    width: $max-width;
+  }
+
   &--flex {
     width: $max-width;
     display: flex;

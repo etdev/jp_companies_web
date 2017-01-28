@@ -1,9 +1,12 @@
 .company {
-  margin-top: 1.5em;
   padding: 1em;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid $border-color-panel;
+
+  .company__name {
+    margin-top: 0;
+  }
 
   .company__info {
     display: flex;

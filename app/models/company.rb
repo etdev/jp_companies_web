@@ -15,6 +15,10 @@ class Company < ApplicationRecord
     save!
   end
 
+  def self.by_rating
+    order(rating: :desc)
+  end
+
   private
 
   def entries
