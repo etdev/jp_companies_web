@@ -10,9 +10,7 @@
     border: 1px solid #bfcbd9;
     color: #1f2d3d;
 
-    &:active,
-    &:hover,
-    &:focus {
+    @include activated {
       color: $action-color;
       border-color: $action-color;
     }
@@ -23,9 +21,7 @@
     border: 1px solid $action-color-light;
     color: #fff;
 
-    &:active,
-    &:hover,
-    &:focus {
+    @include activated {
       background-color: $action-color;
     }
   }
