@@ -1,0 +1,18 @@
+.container
+  h3.form__heading = "Edit Company ##{company.id}"
+
+  .form.form--company
+    = form_for company do |form|
+      .form__row
+        = form.label :name
+        = form.text_field :name
+
+      .form__row
+        = form.label :name_jp
+        = form.text_field :name_jp
+
+      .form__row
+        = form.label :name_kana
+        = form.text_field :name_kana
+
+      = form.submit t(".submit"), class: "btn btn--primary btn--form-submit"

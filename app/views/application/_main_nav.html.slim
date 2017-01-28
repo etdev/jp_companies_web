@@ -3,5 +3,7 @@ nav.nav.nav--main
     .nav__home-link
       = link_to t("app_name"), root_path, "data-role" => "home_link"
     ul.nav__page-links
-      li.nav__page-link
+      li.nav__page-link class="#{controller_name == 'companies' ? 'active' : ''}"
         = link_to t("companies.display_text"), companies_path
+      li.nav__page-link class="#{controller_name == 'company_registrations' ? 'active' : ''}"
+        = link_to t("companies.new_company"), new_company_registration_path

@@ -17,14 +17,23 @@
       @include single-line-height($main-nav-height);
       align-content: flex-end;
       padding: 0 0.5em;
+      color: #888;
+
+      &.active {
+        border-bottom: 3px solid $action-color;
+        @include activated {
+          border-bottom: 3px solid $action-color;
+        }
+      }
 
       @include activated {
-        border-bottom: 3px solid $action-color;
+        border-bottom: 1px solid $action-color;
       }
 
       &:not(:first-of-type) {
         margin-left: 1em;
       }
+
     }
 
     .nav__home-link {

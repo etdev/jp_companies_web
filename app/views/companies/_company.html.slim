@@ -1,17 +1,17 @@
 .company data-role='company'
-  h3.company-name = company.name
+  h3.company__name = company.name
 
-  ul
-    li
-      | #{t(".name_jp")}: #{company.name_jp}
-    li
-      | #{t(".name_kana")}: #{company.name_kana}
-    li
-      | #{t(".employees_count")}: #{company.employees_count}
-    li data-role='company_id'
-      | #{t(".id")}: #{company.id}
+  .panel
+    ul.company__info
+      li.company__info-item
+        | #{ Company.human_attribute_name(:weighted_rating) }: #{ company.weighted_rating }
+      li.company__info-item
+        | #{ Company.human_attribute_name(:name_jp) }: #{ company.name_jp }
+      li.company__info-item
+        | #{ Company.human_attribute_name(:name_kana) }: #{ company.name_kana }
+      li.company__info-item
+        | #{ Company.human_attribute_name(:employees_count) }: #{ company.employees_count }
+      li.company__info-itme data-role='company_id'
+        | #{t(".id")}: #{company.id}
 
-    - if company.vorkers_entry.present?
-      = render company.vorkers_entry
-    - if company.en_hyouban_entry.present?
-      = render company.en_hyouban_entry
+    = link_to t(".edit_btn"), edit_company_path(company)
