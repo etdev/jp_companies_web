@@ -1,0 +1,4 @@
+.main {
+  @include span-columns(10, block-collapse);
+  @include omega;
+}

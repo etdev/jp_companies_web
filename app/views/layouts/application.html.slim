@@ -9,7 +9,10 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    = render "main_nav"
-    - if flash[:notice]
-      .notice = flash[:notice]
-    = yield
+    aside.aside
+      | yolo
+    main.main
+      = render "main_nav"
+      - if flash[:notice]
+        .notice = flash[:notice]
+      = yield

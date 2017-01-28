@@ -1,0 +1,7 @@
+.aside {
+  @include span-columns(2);
+  display: block;
+  margin-right: auto;
+  background: #ccc;
+  min-height: 100vh;
+}

@@ -1,12 +1,11 @@
 .nav {
   &--main {
     @include clearfix;
-    @include outer-container;
-
-    padding: 1em 0;
+    padding: 1em;
 
     .nav__page-links {
       float: right;
+      cursor: pointer;
     }
 
     .nav__home-link {
