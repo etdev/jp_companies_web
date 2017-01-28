@@ -1,13 +1,26 @@
 .company {
   margin-top: 1.5em;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $border-color-panel;
 
-  .company__name {
-    margin: 0;
-    padding: 0 0 0.5em;
+  .company__info {
+    display: flex;
+
+    li {
+      line-height: 2em;
+    }
   }
 
-  .company__info-item {
-    line-height: 2em;
+  .company__main-image {
+    flex-shrink: 0;
+    img {
+      max-width: 220px;
+    }
+  }
+
+  .company__attr-list {
+    flex-grow: 1;
   }
 }

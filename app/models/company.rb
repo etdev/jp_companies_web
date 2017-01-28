@@ -2,13 +2,20 @@ class Company < ApplicationRecord
   has_one :vorkers_entry
   has_one :en_hyouban_entry
 
-  def weighted_rating
-    ratings_sum = entries.reduce(0) do |avg_rating, entry|
-      avg_rating + entry.weighted_rating
-    end
+  validates :rating, presence: true, numericality: true
 
-    ratings_sum.fdiv(entries.count)
+  def weighted_rating
+    rating
   end
+
+  def update_rating
+    self.rating = entries.map(&:weighted_rating).reduce(0, :+)
+      .fdiv(entries.count)
+
+    save!
+  end
+
+  private
 
   def entries
     @_entries ||= [vorkers_entry, en_hyouban_entry]

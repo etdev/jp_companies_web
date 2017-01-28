@@ -26,6 +26,6 @@ class CompaniesController < ApplicationController
   def company_params
     params
       .require(:company)
-      .permit(:name, :name_jp, :name_kana)
+      .permit(:name, :name_jp, :name_kana, :main_image_url)
   end
 end

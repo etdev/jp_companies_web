@@ -9,6 +9,7 @@ en:
         name_kana: Name (kana)
         employees_count: Employee Count
         weighted_rating: Rating
+        main_image_url: Image URL
 
       en_hyouban_entry:
         en_hyouban_id: En Hyouban ID

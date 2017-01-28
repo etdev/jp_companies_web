@@ -30,3 +30,6 @@ Style/EmptyMethod:
 Style/Lambda:
   Enabled: false
 
+Style/UselessAssignment:
+  Enabled: false
+

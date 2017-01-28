@@ -1,11 +1,11 @@
 .company data-role='company'
   h3.company__name = company.name
 
-  .panel
-    ul.company__info
-      li.company__info-item
+  .company__info
+    ul.company__attr-list
+      li
         | #{ Company.human_attribute_name(:weighted_rating) }: #{ company.weighted_rating }
-      li.company__info-item
+      li
         | #{ Company.human_attribute_name(:name_jp) }: #{ company.name_jp }
       li.company__info-item
         | #{ Company.human_attribute_name(:name_kana) }: #{ company.name_kana }
@@ -14,4 +14,8 @@
       li.company__info-itme data-role='company_id'
         | #{t(".id")}: #{company.id}
 
-    = link_to t(".edit_btn"), edit_company_path(company)
+      = link_to t(".edit_btn"), edit_company_path(company)
+
+    .company__main-image
+      img src="#{company.main_image_url}"
+
