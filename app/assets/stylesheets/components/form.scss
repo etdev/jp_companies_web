@@ -1,4 +1,6 @@
 .form {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 
   &--nested {
@@ -11,29 +13,64 @@
     }
   }
 
-  &__heading {
-    margin-top: 0;
-    padding: 0.5em 0;
-  }
+  &--horizontal {
+    flex-direction: row;
+    padding: 0 1em;
 
-  &__row {
-    display: block;
-    padding: 0.5em 0;
+    .form__row {
+      display: flex;
+      width: 100%;
 
-    label,
-    input {
-      display: inline-block;
-      width: 50%;
+      label,
+      input {
+        flex-grow: 1;
+        display: auto;
+        width: auto;
+      }
+
+      input[type=text] {
+        width: 300px;
+      }
     }
 
-    input[type=text],
-    input[type=number] {
-      border-radius: 3px;
-      box-shadow: none;
-      border: 1px solid $bg-color-mid;
-      height: 32px;
-      font-size: 0.8em;
-      padding: 0 1em;
+    .form__item {
+      flex-grow: 0;
+      margin-right: 1em;
+    }
+
+    .form__submit {
+      flex-grow: 0;
+    }
+  }
+}
+
+.form__heading {
+  margin-top: 0;
+  padding: 0.5em 0;
+}
+
+.form__row {
+  display: block;
+  padding: 0.5em 0;
+
+  label,
+  input {
+    display: inline-block;
+    width: 50%;
+  }
+
+  input[type=text],
+  input[type=number] {
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid $bg-color-mid;
+    height: 35px;
+    font-size: 0.8em;
+    padding: 0 1em;
+
+    @include activated {
+      outline: none;
+      border: 1px solid $action-color;
     }
   }
 }

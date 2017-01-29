@@ -1,0 +1,8 @@
+= form_for :search, url: company_searches_path, method: :get, html: { class: "form form--horizontal" } do |form|
+  .form__row
+    .form__item
+      = form.text_field :query
+
+    .form__submit
+      = form.submit t(".submit"), class: "btn btn--primary"
+

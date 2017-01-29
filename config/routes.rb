@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :vorkers_entries, only: [:show, :index]
   resources :companies, only: [:index, :show, :edit, :update]
   resources :company_registrations, only: [:new, :create]
+  resources :company_searches, only: [:index]
 end

@@ -48,6 +48,8 @@ en:
     new_company: New Company
     form:
       submit: Submit
+    search_form:
+      submit: Search
     company:
       edit_btn: Edit
       en_hyouban_entry: En-Hyouban (JP)
@@ -75,3 +77,6 @@ en:
     vorkers_entry:
       view_original: View Original
       weighted_rating: Overall Rating
+  company_searches:
+    index:
+      results_message: Your search for '%{query}' returned %{count} result(s).

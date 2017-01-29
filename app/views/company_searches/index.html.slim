@@ -1,5 +1,5 @@
 .company-list data-role='companies-list'
-  = render "search_form"
+  h3 = t(".results_message", query: @query, count: @companies.count)
 
   = render @companies
 
