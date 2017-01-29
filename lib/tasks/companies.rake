@@ -30,4 +30,16 @@ namespace "companies" do
   task update_ratings: :environment do
     Company.all.each(&:update_rating)
   end
+
+  task disable_unset: :environment do
+    Company.where("name LIKE 'UNSET%'").each do |company|
+      company.update(is_enabled: false)
+    end
+  end
+
+  task enable_unset: :environment do
+    Company.where("name LIKE 'UNSET%'").each do |company|
+      company.update(is_enabled: true)
+    end
+  end
 end

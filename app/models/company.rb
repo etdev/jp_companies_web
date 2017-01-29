@@ -6,31 +6,38 @@ class Company < ApplicationRecord
 
   validates :rating, presence: true, numericality: true
 
+  after_create :update_rating
+
   def ratings_count
     entries.map(&:ratings_count).sum
   end
 
   def update_rating
+    return if entries.blank?
     self.rating = entries.map(&:weighted_rating).sum
       .fdiv(entries.count)
 
     save!
   end
 
-  # categores (jp)
+  # categories
   def categories
-    entries.map(&:category).join("、")
+    custom_categories || entries.map(&:category).join("、")
   end
 
-  # TODO: REFACTOR (move to decorator etc)
+  # TODO: REFACTOR (view-specific)
   def average_salary_en
     return "???" unless average_salary.present?
 
-    "¥#{ average_salary.fdiv(100) }M"
+    "¥#{average_salary.fdiv(100)}M"
   end
 
   def self.by_rating
     order(rating: :desc)
+  end
+
+  def self.enabled
+    where(is_enabled: true)
   end
 
   private

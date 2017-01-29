@@ -5,7 +5,9 @@ class CompaniesController < ApplicationController
 
   def index
     @companies = Company.all
+      .enabled
       .by_rating
+      .includes(:en_hyouban_entry, :vorkers_entry)
       .page(params[:page])
   end
 
@@ -28,6 +30,16 @@ class CompaniesController < ApplicationController
   def company_params
     params
       .require(:company)
-      .permit(:name, :name_jp, :name_kana, :main_image_url)
+      .permit(
+        :name,
+        :name_jp,
+        :name_kana,
+        :main_image_url,
+        :custom_categories,
+        :is_enabled,
+        :is_hiring,
+        :japanese_level,
+        :main_location
+      )
   end
 end

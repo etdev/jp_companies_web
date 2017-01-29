@@ -26,11 +26,14 @@
       width: 50%;
     }
 
-    input[type=text] {
+    input[type=text],
+    input[type=number] {
       border-radius: 3px;
       box-shadow: none;
-      border: 1px solid #bbb;
-      height: 2em;
+      border: 1px solid $bg-color-mid;
+      height: 32px;
+      font-size: 0.8em;
+      padding: 0 1em;
     }
   }
 }

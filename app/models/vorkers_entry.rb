@@ -25,6 +25,11 @@ class VorkersEntry < ApplicationRecord
     self[:company] || NullCompany.new
   end
 
+  # TODO: DUPE
+  def weighting
+    1.2
+  end
+
   private
 
   # TODO: DUPE

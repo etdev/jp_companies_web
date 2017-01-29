@@ -19,4 +19,24 @@
         = form.label :main_image_url
         = form.text_field :main_image_url
 
+      .form__row
+        = form.label :custom_categories
+        = form.text_field :custom_categories
+
+      .form__row
+        = form.label :is_enabled
+        = form.check_box :is_enabled
+
+      .form__row
+        = form.label :is_hiring
+        = form.check_box :is_hiring
+
+      .form__row
+        = form.label :japanese_level
+        = form.number_field :japanese_level
+
+      .form__row
+        = form.label :main_location
+        = form.text_field :main_location
+
       = form.submit t(".submit"), class: "btn btn--primary btn--form-submit"

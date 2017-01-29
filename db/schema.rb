@@ -10,17 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170128145502) do
+ActiveRecord::Schema.define(version: 20170129075240) do
 
   create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",            default: "", null: false
-    t.string   "name_jp",         default: "", null: false
-    t.string   "name_kana",       default: "", null: false
-    t.integer  "employees_count", default: 0,  null: false
-    t.integer  "rating",          default: 0,  null: false
+    t.string   "name",              default: "",   null: false
+    t.string   "name_jp",           default: "",   null: false
+    t.string   "name_kana",         default: "",   null: false
+    t.integer  "employees_count",   default: 0,    null: false
+    t.integer  "rating",            default: 0,    null: false
     t.string   "main_image_url"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "custom_categories"
+    t.datetime "founded_at"
+    t.boolean  "is_enabled",        default: true, null: false
+    t.boolean  "is_hiring"
+    t.boolean  "is_public"
+    t.boolean  "is_profitable"
+    t.integer  "japanese_level"
+    t.string   "main_location"
     t.index ["name"], name: "index_companies_on_name", using: :btree
     t.index ["name_kana"], name: "index_companies_on_name_kana", using: :btree
   end

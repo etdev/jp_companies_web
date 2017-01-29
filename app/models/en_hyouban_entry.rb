@@ -29,6 +29,11 @@ class EnHyoubanEntry < ApplicationRecord
     self[:company] || NullCompany.new
   end
 
+  # TODO: DUPE
+  def weighting
+    1
+  end
+
   def self.by_highest_salary
     order(average_salary: :desc)
   end

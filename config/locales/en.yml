@@ -15,6 +15,11 @@ en:
         en_hyouban_entry: En-Hyouban (JP)
         vorkers_entry: Vorkers (JP)
         categories: Categories
+        custom_categories: Categories
+        is_enabled: Enabled
+        is_hiring: Hiring
+        japanese_level: Required Japanese Level (0-100)
+        main_location: Location
 
       en_hyouban_entry:
         en_hyouban_id: En Hyouban ID

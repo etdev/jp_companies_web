@@ -1,12 +1,12 @@
 require "rails_helper"
 
 RSpec.feature "User views home page" do
-  scenario "sees welcome message" do
+  scenario "sees companies" do
     visit root_path
-    expect(page).to have_content(t("homes.show.welcome_message"))
+    expect(page).to have_css("[data-role='companies-list']")
   end
 
-  scenario "sees welcome message" do
+  scenario "sees home link" do
     visit root_path
 
     within ".nav--main" do

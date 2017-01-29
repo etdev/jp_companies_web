@@ -23,7 +23,17 @@ RSpec.feature "User views companies list" do
     end
   end
 
-  scenario "paginates results" do
+  scenario "doesn't see disabled companies" do
+    company = create(:company, is_enabled: false)
+
+    visit companies_path
+
+    within ".company-list" do
+      expect(page).not_to have_content(company.name)
+    end
+  end
+
+  scenario "sees paginated results" do
     create_list(:company, per_page + 1)
 
     visit companies_path

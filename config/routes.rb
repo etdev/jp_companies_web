@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "homes#show"
+  root to: "companies#index"
 
   resources :en_hyouban_entries, only: [:show, :index]
   resources :vorkers_entries, only: [:show, :index]
