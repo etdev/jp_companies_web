@@ -4,7 +4,9 @@ class CompaniesController < ApplicationController
   end
 
   def index
-    @companies = Company.all.by_rating
+    @companies = Company.all
+      .by_rating
+      .page(params[:page])
   end
 
   def edit

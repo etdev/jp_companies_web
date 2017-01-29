@@ -59,6 +59,7 @@ RSpec.feature "User views en_hyouban entries list" do
     "[data-role=en-hyouban-entry]"
   end
 
+  # TODO: DUPE
   def per_page
     EnHyoubanEntry.default_per_page
   end

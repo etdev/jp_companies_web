@@ -7,11 +7,14 @@ en:
         name: Name
         name_jp: Name (JP)
         name_kana: Name (kana)
-        employees_count: Employee Count
+        employees_count: Employees
         weighted_rating: Rating
         main_image_url: Image URL
-        ratings_count: Rating Count
+        ratings_count: Ratings
         average_salary: Average Salary
+        en_hyouban_entry: En-Hyouban (JP)
+        vorkers_entry: Vorkers (JP)
+        categories: Categories
 
       en_hyouban_entry:
         en_hyouban_id: En Hyouban ID
@@ -42,6 +45,8 @@ en:
       submit: Submit
     company:
       edit_btn: Edit
+      en_hyouban_entry: En-Hyouban (JP)
+      vorkers_entry: Vorkers (JP)
 
   company_registrations:
     messages:

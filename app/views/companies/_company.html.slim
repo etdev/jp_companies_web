@@ -1,25 +1,29 @@
-.company data-role='company'
-  h3.company__name = company.name
+.company data-role='company' data-company_id=company.id
+  .company__name
+    h3.company__name-main = company.name
+    span.company__name-jp = company.name_jp
 
   .company__info
     ul.company__attr-list
       li
         | #{ Company.human_attribute_name(:rating) }: #{ company.rating }
       li
-        | #{ Company.human_attribute_name(:name_jp) }: #{ company.name_jp }
-      li
-        | #{ Company.human_attribute_name(:name_kana) }: #{ company.name_kana }
-      li
         | #{ Company.human_attribute_name(:employees_count) }: #{ company.employees_count }
       li
         | #{ Company.human_attribute_name(:ratings_count) }: #{ company.ratings_count}
       li
-        | #{ Company.human_attribute_name(:average_salary) }: #{ company.average_salary}万円
+        | #{ Company.human_attribute_name(:average_salary) }: #{ company.average_salary_en}
       li
-        | #{t(".id")}: #{company.id}
-
-      = link_to t(".edit_btn"), edit_company_path(company)
+        | #{ Company.human_attribute_name(:categories) }: #{ company.categories }
 
     .company__main-image
       img src="#{company.main_image_url}"
+
+  ul.company__external-links
+    // TODO: REFACTOR
+    li = link_to t(".edit_btn"), edit_company_path(company)
+    - if company.en_hyouban_entry.present?
+      li = link_to t(".en_hyouban_entry"), company.en_hyouban_entry.url
+    - if company.vorkers_entry.present?
+      li = link_to t(".vorkers_entry"), company.vorkers_entry.url
 

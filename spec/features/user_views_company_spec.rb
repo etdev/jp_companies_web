@@ -6,9 +6,6 @@ RSpec.feature "User views company" do
 
     visit company_path(company)
 
-    expect(page).to have_css(
-      "[data-role=company_id]",
-      text: company.id
-    )
+    expect(page).to have_css("[data-company_id='#{company.id}']")
   end
 end

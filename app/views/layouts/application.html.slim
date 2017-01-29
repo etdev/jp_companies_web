@@ -9,7 +9,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    .container--main
+    .container.container--main
       header
         = render "main_nav"
 
@@ -17,3 +17,5 @@ html
         - if flash[:notice]
           .notice = flash[:notice]
         = yield
+
+    // = render "main_footer"

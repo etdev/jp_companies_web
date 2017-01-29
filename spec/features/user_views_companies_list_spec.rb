@@ -23,9 +23,22 @@ RSpec.feature "User views companies list" do
     end
   end
 
+  scenario "paginates results" do
+    create_list(:company, per_page + 1)
+
+    visit companies_path
+
+    expect(page).to have_css(company_css, count: per_page)
+  end
+
   private
 
   def company_css
     "[data-role=company]"
+  end
+
+  # TODO: DUPE
+  def per_page
+    Company.default_per_page
   end
 end

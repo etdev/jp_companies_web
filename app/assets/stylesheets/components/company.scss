@@ -2,10 +2,24 @@
   padding: 1em;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid $border-color-panel;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $border-color-panel;
+  }
 
   .company__name {
     margin-top: 0;
+
+    .company__name-main {
+      display: inline-block;
+      padding-right: 0.5em;
+      font-size: 1.2em;
+    }
+  }
+
+  .company__name-jp {
+    font-size: 0.8em;
+    color: $font-color-secondary;
   }
 
   .company__info {
@@ -25,5 +39,28 @@
 
   .company__attr-list {
     flex-grow: 1;
+  }
+
+  .company__external-links {
+    margin-top: 1em;
+    display: flex;
+    align-content: stretch;
+
+    li {
+      flex-grow: 1;
+      text-align: center;
+
+      &:not(:last-of-type) {
+        border-right: 1px solid $border-color-panel;
+      }
+
+      a {
+        display: block;
+        padding: 1em;
+        @include activated {
+          background: $border-color-panel;
+        }
+      }
+    }
   }
 }

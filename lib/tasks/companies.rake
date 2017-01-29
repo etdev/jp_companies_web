@@ -1,6 +1,7 @@
 namespace "companies" do
+  # TODO: REFACTOR
+  # get overlapping entry pairs
   task generate_from_entries: :environment do
-    # get overlapping entry pairs
     vorkers_entries = VorkersEntry.where(company_id: nil)
     en_hyouban_entries = EnHyoubanEntry.where(company_id: nil)
 
@@ -23,5 +24,10 @@ namespace "companies" do
         next
       end
     end
+  end
+
+  # update ratings for all companies
+  task update_ratings: :environment do
+    Company.all.each(&:update_rating)
   end
 end
