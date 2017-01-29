@@ -2,14 +2,16 @@ class Company < ApplicationRecord
   has_one :vorkers_entry
   has_one :en_hyouban_entry
 
+  delegate :average_salary, to: :en_hyouban_entry
+
   validates :rating, presence: true, numericality: true
 
-  def weighted_rating
-    rating
+  def ratings_count
+    entries.map(&:ratings_count).sum
   end
 
   def update_rating
-    self.rating = entries.map(&:weighted_rating).reduce(0, :+)
+    self.rating = entries.map(&:weighted_rating).sum
       .fdiv(entries.count)
 
     save!
@@ -22,7 +24,7 @@ class Company < ApplicationRecord
   private
 
   def entries
-    @_entries ||= [vorkers_entry, en_hyouban_entry]
+    [vorkers_entry, en_hyouban_entry]
       .compact
   end
 end

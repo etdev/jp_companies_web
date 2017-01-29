@@ -4,14 +4,18 @@
   .company__info
     ul.company__attr-list
       li
-        | #{ Company.human_attribute_name(:weighted_rating) }: #{ company.weighted_rating }
+        | #{ Company.human_attribute_name(:rating) }: #{ company.rating }
       li
         | #{ Company.human_attribute_name(:name_jp) }: #{ company.name_jp }
-      li.company__info-item
+      li
         | #{ Company.human_attribute_name(:name_kana) }: #{ company.name_kana }
-      li.company__info-item
+      li
         | #{ Company.human_attribute_name(:employees_count) }: #{ company.employees_count }
-      li.company__info-itme data-role='company_id'
+      li
+        | #{ Company.human_attribute_name(:ratings_count) }: #{ company.ratings_count}
+      li
+        | #{ Company.human_attribute_name(:average_salary) }: #{ company.average_salary}万円
+      li
         | #{t(".id")}: #{company.id}
 
       = link_to t(".edit_btn"), edit_company_path(company)
